@@ -32,7 +32,7 @@ a {
 }
 
 a:hover {
-  color: #ffc732;
+  color: #034efc;
   text-decoration: none;
 }
 
@@ -45,6 +45,57 @@ h6 {
   font-family: var(--font-primary);
 }
 
+button {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #03045e;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+ }
+ 
+ button::before,
+ button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+ }
+ 
+ button::before {
+  left: -10px;
+  background: var(--color-default);
+ }
+ 
+ button::after {
+  right: -10px;
+  background: var(--color-primary);
+ }
+ 
+ button:hover::before,
+ button:hover::after {
+  width: 58%;
+ }
+ 
+ button:hover span {
+  color: #fff;
+  transition: 0.3s;
+ }
+ 
+ button span {
+  color: var(--color-secondary);
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+ }
+
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/
@@ -56,6 +107,8 @@ section {
 .section-bg {
   background-color: #f5f6f7;
 }
+
+
 
 .section-header {
   text-align: center;
@@ -146,8 +199,12 @@ section {
   line-height: 0;
 }
 
+.scroll-top i:hover{
+  color: #fff;
+}
+
 .scroll-top:hover {
-  background: #ffc732;
+  background: #034efc;
   color: #fff;
 }
 
@@ -717,6 +774,19 @@ section {
 # Our Projects Section
 --------------------------------------------------------------*/
 
+/* Project info */
+
+th {
+  text-align: center;
+  font-weight: 1000;
+}
+
+td {
+  text-align: center;
+  font-weight: 600;
+}
+
+
 
 /*--------------------------------------------------------------
 # Alt Services Section
@@ -943,173 +1013,6 @@ section {
   margin-right: 6px;
 }
 
-/*--------------------------------------------------------------
-# Projet Details Section
---------------------------------------------------------------*/
-.project-details .portfolio-details-slider img {
-  width: 100%;
-}
-
-.project-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.7);
-  opacity: 1;
-}
-
-.project-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--color-primary);
-}
-
-.project-details .swiper-button-prev,
-.project-details .swiper-button-next {
-  width: 48px;
-  height: 48px;
-}
-
-.project-details .swiper-button-prev:after,
-.project-details .swiper-button-next:after {
-  color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(0, 0, 0, 0.2);
-  font-size: 24px;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-}
-
-.project-details .swiper-button-prev:hover:after,
-.project-details .swiper-button-next:hover:after {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-@media (max-width: 575px) {
-
-  .project-details .swiper-button-prev,
-  .project-details .swiper-button-next {
-    display: none;
-  }
-}
-
-.project-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  position: relative;
-}
-
-.project-details .portfolio-info h3:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: var(--color-primary);
-  left: 0;
-  bottom: 0;
-}
-
-.project-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.project-details .portfolio-info ul li {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 15px;
-}
-
-.project-details .portfolio-info ul strong {
-  text-transform: uppercase;
-  font-weight: 400;
-  color: #838893;
-  font-size: 14px;
-}
-
-.project-details .portfolio-info .btn-visit {
-  padding: 8px 40px;
-  background: var(--color-primary);
-  color: #fff;
-  border-radius: 50px;
-  transition: 0.3s;
-}
-
-.project-details .portfolio-info .btn-visit:hover {
-  background: #ffc019;
-}
-
-.project-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: var(--color-secondary);
-}
-
-.project-details .portfolio-description p {
-  padding: 0;
-}
-
-.project-details .portfolio-description .testimonial-item {
-  padding: 30px 30px 0 30px;
-  position: relative;
-  background: #f5f6f7;
-  height: 100%;
-  margin-bottom: 50px;
-}
-
-.project-details .portfolio-description .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50px;
-  border: 6px solid #fff;
-  float: left;
-  margin: 0 10px 0 0;
-}
-
-.project-details .portfolio-description .testimonial-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 15px 0 5px 0;
-  padding-top: 20px;
-}
-
-.project-details .portfolio-description .testimonial-item h4 {
-  font-size: 14px;
-  color: #6c757d;
-  margin: 0;
-}
-
-.project-details .portfolio-description .testimonial-item .quote-icon-left,
-.project-details .portfolio-description .testimonial-item .quote-icon-right {
-  color: #ffd565;
-  font-size: 26px;
-  line-height: 0;
-}
-
-.project-details .portfolio-description .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
-}
-
-.project-details .portfolio-description .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-  transform: scale(-1, -1);
-}
-
-.project-details .portfolio-description .testimonial-item p {
-  font-style: italic;
-  margin: 0 0 15px 0 0 0;
-  padding: 0;
-}
 
 /*--------------------------------------------------------------
 # Service Details Section
