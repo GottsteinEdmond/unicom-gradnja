@@ -45,10 +45,6 @@ h6 {
   font-family: var(--font-primary);
 }
 
-.carousel-control-next,
-.carousel-control-prev /*, .carousel-indicators */ {
-    filter: invert(100%);
-  }
 
 /*--------------------------------------------------------------
 # Sections & Section Header
