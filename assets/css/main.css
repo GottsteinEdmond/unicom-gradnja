@@ -1,6 +1,8 @@
 /* Fonts */
 :root {
-  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-primary: "Roboto", sans-serif;
   --font-secondary: "Work Sans", sans-serif;
 }
@@ -8,7 +10,7 @@
 /* Colors */
 :root {
   --color-default: #364d59;
-  --color-primary: #42a5f5  ;
+  --color-primary: #42a5f5;
   --color-secondary: #52565e;
 }
 
@@ -45,7 +47,6 @@ h6 {
   font-family: var(--font-primary);
 }
 
-
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/
@@ -57,8 +58,6 @@ section {
 .section-bg {
   background-color: #f5f6f7;
 }
-
-
 
 .section-header {
   text-align: center;
@@ -125,7 +124,6 @@ section {
   font-family: var(--font-secondary);
 }
 
-
 /*--------------------------------------------------------------
 # Scroll top button
 --------------------------------------------------------------*/
@@ -149,7 +147,7 @@ section {
   line-height: 0;
 }
 
-.scroll-top i:hover{
+.scroll-top i:hover {
   color: #fff;
 }
 
@@ -181,7 +179,8 @@ section {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #fff;
-  border-color: var(--color-primary) transparent var(--color-primary) transparent;
+  border-color: var(--color-primary) transparent var(--color-primary)
+    transparent;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -267,7 +266,7 @@ section {
     position: relative;
   }
 
-  .navbar>ul>li {
+  .navbar > ul > li {
     white-space: nowrap;
     padding: 10px 0 10px 28px;
   }
@@ -295,7 +294,7 @@ section {
     margin-left: 5px;
   }
 
-  .navbar>ul>li>a:before {
+  .navbar > ul > li > a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -309,7 +308,7 @@ section {
   }
 
   .navbar a:hover:before,
-  .navbar li:hover>a:before,
+  .navbar li:hover > a:before,
   .navbar .active:before {
     visibility: visible;
     width: 100%;
@@ -318,7 +317,7 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: #fff;
   }
 
@@ -355,11 +354,11 @@ section {
 
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
-  .navbar .dropdown ul li:hover>a {
+  .navbar .dropdown ul li:hover > a {
     color: var(--color-primary);
   }
 
-  .navbar .dropdown:hover>ul {
+  .navbar .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -371,7 +370,7 @@ section {
     visibility: hidden;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: 100%;
@@ -384,13 +383,12 @@ section {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
 
 @media (min-width: 1280px) {
-
   .mobile-nav-show,
   .mobile-nav-hide {
     display: none;
@@ -448,7 +446,7 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: #fff;
   }
 
@@ -462,8 +460,8 @@ section {
     border: 1px solid #222428;
   }
 
-  .navbar .dropdown>.dropdown-active,
-  .navbar .dropdown .dropdown>.dropdown-active {
+  .navbar .dropdown > .dropdown-active,
+  .navbar .dropdown .dropdown > .dropdown-active {
     display: block;
   }
 
@@ -722,7 +720,6 @@ section {
 
 /* testing place */
 
-
 /*--------------------------------------------------------------
 # Our Projects Section
 --------------------------------------------------------------*/
@@ -744,10 +741,14 @@ td {
     width: 100%;
     height: 20vw;
     object-fit: cover;
-}
+  }
 }
 
+/* APARTMENTS SECTION */
 
+.apartment-section {
+  background: #364d59;
+}
 
 /*--------------------------------------------------------------
 # Alt Services Section
@@ -973,7 +974,6 @@ td {
   color: var(--color-primary);
   margin-right: 6px;
 }
-
 
 /*--------------------------------------------------------------
 # Service Details Section
